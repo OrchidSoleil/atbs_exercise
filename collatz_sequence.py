@@ -1,0 +1,1 @@
+print('This is Collatz Sequence Function')
