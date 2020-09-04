@@ -12,14 +12,14 @@ print('This is Collatz Sequence Function. The Collatz conjecture is a conjecture
 #Hint: An integer number is even if number % 2 == 0, and it’s odd if number % 2 == 1.
 
 
-### Collatz Sequence
+# zZ= Collatz Sequence =Zz   #https://github.com/OrchidSoleil
 
 def collatz(number):
 
     if number % 2 == 0: #checks if number is even
         return number//2
     else:
-        return 3*number+1 #checks if number is odd
+        return 3 * number + 1 #checks if number is odd
 
 
 n = int(input('Enter any integer greater than 1: ')) # n variable here contains an integer
@@ -29,4 +29,34 @@ while n != 1: #until integer doesn't equal 1.
     print(n) #print variable n after it was run through collatz function and continue while loop again.
 
     
-  ### Collatz sequence WITH input Validation  
+  # zZ= Collatz Sequence with input Validation =Zz   #https://github.com/OrchidSoleil 
+
+def collatz(number): # the same collatz function
+
+    if number % 2 == 0:
+        return number//2
+    else:
+        return 3 * number + 1
+
+
+def validation(): # this is a try/except function to check wheather input is integer
+    n = ''
+    while n != int():
+        try:
+            n = int(input('Enter integer greater than 1: ')) #if input is integer, the function returns it 
+            return n
+
+        except ValueError:
+            print('Wrong Value. Try Again.') #ValueError is thrown (like a fit) when int() function is passed a noninteger string.
+
+
+n = validation() 
+
+while n != 1:
+# if the value is 0, then collatz function will return 0 indefinitely, to escape this, i've put zero checker into while-loop. 
+    if n == 0:
+        print('You should enter integer greater than 1.')
+        n = validation() # I wanted to give user a chance to try again if they mistakenly input 0 first.#https://github.com/OrchidSoleil
+    else:
+        n = collatz(n)
+        print(n)
