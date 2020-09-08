@@ -1,6 +1,6 @@
 # zZ= Comma Code =Zz
 
-This is a task from Automate the Boring Staff, chapter 4 'Lists'.
+#This is a task from Automate the Boring Staff, chapter 4 'Lists'.
 
 # 1. Say you have a list value like this: spam = ['apples', 'bananas', 'tofu', 'cats']
 # 2. Write a function that takes a list value as an argument
@@ -17,7 +17,7 @@ def coma (li):
         print('and ' + li[-1])
 
     except IndexError:
-        print('The list is empty')
+        print('The list is empty') #https://github.com/OrchidSoleil
 
 
 spam = ['apples', 'bananas', 'tofu', 'cats']
@@ -25,6 +25,6 @@ spam1 = ['neroli', 'verbena', 'patchouli', 'vetiver', 'ylang-ylang']
 empty_list = []
 
 
-coma(spam) # apples, bananas, tofu, and cats
+coma(spam) # apples, bananas, tofu, and cats #https://github.com/OrchidSoleil
 coma(spam1) # neroli, verbena, patchouli, vetiver, and ylang-ylang
 coma(empty_list) # without try-except this shows IndexError: the list is out of range
